@@ -1,0 +1,38 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Safe zones: anyone can read; authenticated users may create (and must set createdBy to their uid).
+    // Only the document owner (createdBy) or an admin may update or delete.
+    match /safe_zones/{zoneId} {
+      allow read: if true; // or `if request.auth != null` to restrict reads to signed-in users
+      allow create: if request.auth != null
+        && request.resource.data.createdBy == request.auth.uid;
+      allow update, delete: if request.auth != null
+        && (
+          resource.data.createdBy == request.auth.uid
+          || isAdmin()
+        );
+    }
+
+    // Allows any authenticated user to read/write public data (like the volunteer list) indefinitely.
+    match /artifacts/{appId}/public/data/{document=**} {
+      allow read, write: if request.auth != null;
+    }
+    
+    // Allows authenticated users to read/write their own private data.
+    match /artifacts/{appId}/users/{userId}/{document=**} {
+      allow read, write: if request.auth != null && request.auth.uid == userId;
+    }
+
+    // helper: admin check using either a custom claim or an admins collection document
+    function isAdmin() {
+      return request.auth != null
+        && (
+          // check for an 'admin' custom claim on the ID token
+          (request.auth.token.admin == true)
+          // OR check presence of a document at /admins/{uid}
+          || exists(/databases/$(database)/documents/admins/$(request.auth.uid))
+        );
+    }
+  }
+}

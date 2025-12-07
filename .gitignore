@@ -1,0 +1,40 @@
+# Flutter & Dart
+.dart_tool/
+.packages
+.pub/
+build/
+.flutter-plugins
+.flutter-plugins-dependencies
+lib/firebase_options.dart
+.survive_net.iml
+# Android
+**/android/**/local.properties
+**/android/.gradle/
+**/android/app/build/
+
+# iOS & macOS
+**/ios/Flutter/Flutter.framework
+**/ios/Flutter/App.framework
+**/ios/.symlinks/
+**/ios/Pods/
+**/macos/Flutter/ephemeral/
+
+# Windows/Linux
+**/windows/flutter/ephemeral/
+**/linux/flutter/ephemeral/
+
+# IDE settings
+.idea/
+.vscode/
+*.iml
+.vs/
+
+# Env files
+.env
+.env.*
+firebase_app_id_file.json
+
+# Logs
+*.log
+hs_err_pid*
+replay_pid*
