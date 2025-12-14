@@ -50,6 +50,7 @@ It helps citizens stay informed about disasters, locate safe zones, send SOS ale
   </tr>
 </table>
 ---
+
 ## Tech Stack
 
 | Frontend | Backend & Services |
