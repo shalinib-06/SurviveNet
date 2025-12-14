@@ -44,7 +44,7 @@ It helps citizens stay informed about disasters, locate safe zones, send SOS ale
   </tr>
   <tr>
     <td><img src="output_screenshots/img3.jpeg" width="200"/></td>
-    <td><img src="output_screenshots/img17.jpeg" width="200"/></td>
+    <td><img src="output_screenshots/img17.png" width="200"/></td>
     <td><img src="output_screenshots/img6.jpeg" width="200"/></td>
     <td><img src="output_screenshots/img7.jpeg" width="200"/></td>
   </tr>
