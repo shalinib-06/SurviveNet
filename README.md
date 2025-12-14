@@ -1,60 +1,63 @@
-# SurviveNet – Disaster Connectivity Platform
+# SurviveNet – A Disaster Connectivity Platform
 
 SurviveNet is a **real-time disaster management and emergency response mobile application** designed for India.  
-It helps citizens stay informed about disasters, locate safe zones, send SOS alerts, and enables authorities to manage disaster data in real time.
+It helps citizens stay informed about disasters, locate safe zones, send SOS alerts, connect volunteers & victims and enables authorities to manage disaster data in real time.
 
 ---
+##  Key Features
 
-## Key Features
-
-### 🔔 Real-Time Disaster Alerts
-- Live weather & disaster alerts using **OpenWeather Weather Alerts API**
-- Displays **active and recent disasters**
-- India-specific alerts (floods, cyclones, heatwaves, storms)
-
-### 🗺️ Interactive Disaster Map
-- Shows:
-  - Danger zones
-  - Safe zones
-  - Rescue shelters
-
-### 🆘 SOS Emergency System
-- One-tap SOS call to emergency services (**100 / 112**)
-- Sends emergency SMS with:
-  - Live GPS location
-  - Google Maps link
-  - Emergency note
-
-### 👥 Role-Based Access
-- **Victim / Public User**
-  - View disasters
-  - Contact vonlunteers and emergency teams
-  - Navigate to shelters
-  - Send SOS alerts
-- **Volunteer**
-  - Contact victims
-  - Coordinate rescue efforts
-
-### 🔐 Secure Authentication
-- Firebase Authentication
-- Role-based Firestore access
+|  Real-Time Alerts |  Interactive Map |  SOS System |  User Roles |
+|-------------------|------------------|-------------|-------------|
+| Live disaster & weather alerts using **OpenWeather API** | City-based disaster maps using **OpenStreetMap** | One-tap SOS call to emergency helpline and contacts | **Victim / Public User** |
+| Active & recent disasters | Danger zones visualization | Emergency SMS with live GPS | View disasters |
+| India-specific alerts (floods, cyclones, heatwaves) | Safe zones & shelters | Google Maps location link | Contact volunteers |
+| Real-time updates | Navigation support | Emergency note included | Navigate to shelters |
+|  |  |  | Send SOS alerts |
+|  |  |  | Volunteer |
+|  |  |  | Contact victims |
+|  |  |  | Coordinate rescue efforts |
 
 ---
-## 🛠 Tech Stack
+## SurviveNet app screenshots
 
-### Frontend
-- Flutter (Dart)
-- Material UI
-- flutter_map
+<table>
+  <tr>
+    <td><img src="output_screenshots/img2.jpeg" width="200"/></td>
+    <td><img src="output_screenshots/img1.jpeg" width="200"/></td>
+    <td><img src="output_screenshots/img8.jpeg" width="200"/></td>
+    <td><img src="output_screenshots/img5.jpeg" width="200"/></td>
 
-### Backend & Services
-- Firebase Authentication
-- Firebase Firestore
-- OpenWeather API
-- OpenStreetMap
-- Device SMS & Call Intents
+  </tr>
+  <tr>
+    <td><img src="output_screenshots/img9.png" width="200"/></td>
+    <td><img src="output_screenshots/img10.png" width="200"/></td>
+    <td><img src="output_screenshots/img15.jpeg" width="200"/></td>
+    <td><img src="output_screenshots/map.jpeg" width="200"/></td>
+    
+  </tr>
+  <tr>
+    <td><img src="output_screenshots/img12.jpeg" width="200"/></td>
+    <td><img src="output_screenshots/img13.jpeg" width="200"/></td>
+    <td><img src="output_screenshots/img14.jpeg" width="200"/></td>
+    <td><img src="output_screenshots/img11.jpeg" width="200"/></td>
+    
+  </tr>
+  <tr>
+    <td><img src="output_screenshots/img3.jpeg" width="200"/></td>
+    <td><img src="output_screenshots/img4.jpeg" width="200"/></td>
+    <td><img src="output_screenshots/img6.jpeg" width="200"/></td>
+    <td><img src="output_screenshots/img7.jpeg" width="200"/></td>
+  </tr>
+</table>
 ---
+## Tech Stack
 
+| Frontend | Backend & Services |
+|----------|--------------------|
+| Flutter (Dart) | Firebase Authentication |
+| Material UI | OpenWeather and OpenStreetMap |
+| flutter_map | Device SMS & Call Intents |
+---
 ##  APIs Used
 
 | API | Purpose |
@@ -62,7 +65,6 @@ It helps citizens stay informed about disasters, locate safe zones, send SOS ale
 | OpenWeather | Weather alerts & disaster warnings |
 | OpenStreetMap | Map rendering & navigation |
 | Firebase | Auth & real-time database |
-
 ---
 ##  Firebase Setup
 
@@ -75,7 +77,7 @@ It helps citizens stay informed about disasters, locate safe zones, send SOS ale
 5. Place it inside: android/app/google-services.json
 ---
 
-## 🛠️ Installation
+## Prerequisites
 Follow these steps to set up and run the SurviveNet application locally.
 Make sure you have the following installed:
    - Flutter SDK (Channel Stable, minimum version 3.0.0+)
@@ -86,21 +88,17 @@ Make sure you have the following installed:
 
 ## Getting started 
 
-Clone the repository:
-git clone [https://github.com/yourusername/survivenet.git](https://github.com/yourusername/survivenet.git)
-cd survivenet
-
-
-Install Flutter dependencies:
-
-flutter pub get
-
-
-Configure Firebase:
-
-Follow the official Flutter documentation to add the Firebase configuration files (google-services.json for Android and GoogleService-Info.plist for iOS) to their respective directories.
-
-Run the application:
-
-flutter run
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/shalinib-06/SurviveNet
+   cd survivenet
+2. Install Flutter Dependencies:
+   ```bash
+   flutter pub get
+3. Configure Firebase:
+   Follow the official Flutter documentation to add the Firebase configuration files `google-services.json` for Android and `GoogleService-Info.plist` for iOS to their respective directories.
+4. Run the application:
+   ```bash
+   flutter run
+   flutter run
 
