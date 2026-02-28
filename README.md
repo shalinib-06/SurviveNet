@@ -101,5 +101,4 @@ Make sure you have the following installed:
 4. Run the application:
    ```bash
    flutter run
-   flutter run
 
